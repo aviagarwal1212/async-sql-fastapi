@@ -4,17 +4,24 @@ version = "0.1.0"
 description = ""
 authors = ["Avi Agarwal <aviagarwal1212@gmail.com>"]
 readme = "README.md"
-packages = [{include = "sqlalchemy_tutorial"}]
+packages = [{ include = "sqlalchemy_tutorial" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.103.1"
 uvicorn = "^0.23.2"
-sqlmodel = "^0.0.8"
 asyncpg = "^0.28.0"
+sqlalchemy = "^2.0.21"
 
 [tool.poetry.group.dev.dependencies]
 black = "*"
+isort = "*"
+
+[tool.pyright]
+reportUnusedImport = true
+
+[tool.ruff]
+
 
 [build-system]
 requires = ["poetry-core"]
